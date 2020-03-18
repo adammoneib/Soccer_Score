@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scoreListFragment">
+
+    <fragment
+        android:id="@+id/scoreListFragment"
+        android:name="com.example.soccerscore.View.ScoreListFragment"
+        android:label="ScoreListFragment" >
+        <action
+            android:id="@+id/action_scoreListFragment_to_videoListFragment"
+            app:destination="@id/videoListFragment" />
+        <action
+            android:id="@+id/action_scoreListFragment_to_scoreDetailsFragment"
+            app:destination="@id/scoreDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoListFragment"
+        android:name="com.example.soccerscore.View.VideoListFragment"
+        android:label="fragment_video_list"
+        tools:layout="@layout/fragment_video_list" >
+        <action
+            android:id="@+id/action_videoListFragment_to_videoDetailsFragment"
+            app:destination="@id/videoDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreDetailsFragment"
+        android:name="com.example.soccerscore.View.ScoreDetailsFragment"
+        android:label="fragment_score_details"
+        tools:layout="@layout/fragment_score_details" />
+    <fragment
+        android:id="@+id/videoDetailsFragment"
+        android:name="com.example.soccerscore.View.VideoDetailsFragment"
+        android:label="fragment_video_details"
+        tools:layout="@layout/fragment_video_details" />
+</navigation>
